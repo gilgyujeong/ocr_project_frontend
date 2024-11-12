@@ -5,9 +5,16 @@ import UploadPresenter from "./upload.presenter";
 export default function UploadContainer() {
 
     const [file, setFile] = useState(null);
+    const [imageUrl, setImageUrl] = useState("");
 
     const handleFileChange = (event) => {
-        setFile(event.target.files[0])
+        const selectedFile = event.target.files[0]
+        setFile(selectedFile)
+
+        if (selectedFile) {
+            const imageUrl = URL.createObjectURL(selectedFile);
+            setImageUrl(imageUrl);
+        }
     }
 
     const handleSubmit = async (event) => {
@@ -35,7 +42,8 @@ export default function UploadContainer() {
     return (
         <UploadPresenter 
             handleFileChange={handleFileChange}
-            handleSubmit={handleSubmit}   
+            handleSubmit={handleSubmit}
+            imageUrl={imageUrl}
         />
     )
 }

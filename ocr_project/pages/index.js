@@ -1,8 +1,10 @@
-import Head from "next/head";
-import UploadContainer from "../src/components/upload/upload.container";
+import MainPageContainer from "../src/components/mainpage/mainpage.container";
 
 export default function Home() {
   return (
-    <UploadContainer />
+    <>
+      <MainPageContainer />
+    </>
+    
   );
 }
