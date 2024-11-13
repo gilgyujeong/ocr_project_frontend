@@ -9,9 +9,14 @@ export default function MainPageContainer() {
         router.push('/upload')
     }
 
+    const onClickCalculate = () => {
+        router.push('/calculate')
+    }
+
     return (
         <MainPagePresenter 
             onClickUpload={onClickUpload}
+            onClickCalculate={onClickCalculate}
         />
     )
 }
