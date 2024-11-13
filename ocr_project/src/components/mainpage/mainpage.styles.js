@@ -8,8 +8,7 @@ export const MainBox = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 900px;
-    height: 700px;
+    width: 1200px;
     border-radius: 5px;
     margin: auto;
 `
