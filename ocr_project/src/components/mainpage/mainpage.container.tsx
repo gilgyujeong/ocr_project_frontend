@@ -5,11 +5,11 @@ export default function MainPageContainer() {
 
     const router = useRouter();
 
-    const onClickUpload = () => {
+    const onClickUpload = (): void => {
         router.push('/upload')
     }
 
-    const onClickCalculate = () => {
+    const onClickCalculate = (): void => {
         router.push('/calculate')
     }
 

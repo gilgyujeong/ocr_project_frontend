@@ -1,7 +1,11 @@
 import * as S from './mainpage.styles'
 
+interface MainPagePresenterProps {
+    onClickUpload: () => void
+    onClickCalculate: () => void
+}
 
-export default function MainPagePresenter(props) {
+export default function MainPagePresenter(props: MainPagePresenterProps) {
     return (
         <S.MainBox>
             <S.Button 

@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import axios from 'axios'
 import UploadPresenter from "./upload.presenter";
 
 export default function UploadContainer() {
 
-    const [file, setFile] = useState(null);
-    const [imageUrl, setImageUrl] = useState("");
+    const [file, setFile] = useState<File | null>(null);
+    const [imageUrl, setImageUrl] = useState<string>("");
 
-    const handleFileChange = (event) => {
-        const selectedFile = event.target.files[0]
+    const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+        const selectedFile = event.target.files ? event.target.files[0] : null;
         setFile(selectedFile)
 
         if (selectedFile) {
@@ -17,7 +17,7 @@ export default function UploadContainer() {
         }
     }
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         if (!file) {
             alert("파일을 선택해주세요")
             return;
