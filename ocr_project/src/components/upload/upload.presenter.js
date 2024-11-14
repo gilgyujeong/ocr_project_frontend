@@ -1,13 +1,10 @@
-import { LeftOutlined } from '@ant-design/icons'
 import * as S from './upload.styles'
 
 export default function UploadPresenter(props) {
     return (
         
         <S.PageBox>
-            <LeftOutlined />
             <form onSubmit={props.handleSubmit}>
-                
                     {<S.Image>props.imageUrl</S.Image>&& (
                         <S.ImageBox >
                             <S.Image src={props.imageUrl} />

@@ -6,7 +6,7 @@ export const PageBox = styled.div`
     align-items: center;
     width: 600px;
     margin: auto;
-    border: 1px solid black;
+    margin-top: 50px;
 `
 
 export const ImageBox = styled.div`
@@ -19,6 +19,7 @@ export const Image = styled.img`
     width: 400px;
     height: 400px;
     object-fit: contain;
+    border: 1px solid black;
     border-radius: 5px;
 `
 
